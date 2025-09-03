@@ -1,35 +1,34 @@
 
 ---
 
-### 2) `cs50w-network`
-```bash
-cd ~/cs50w-network
+# 🌐 Network (Project 4)
 
-cat > README.md <<'EOF'
+### Option A — paste this Markdown into `README.md`
+```markdown
 # CS50W Project 4 — Network
 
-A mini social network where users post updates, follow others, and like posts. Includes pagination, inline editing, and separate feeds for “All Posts” and “Following”.
+A mini social network: users post updates, follow others, like posts, and edit their own posts inline. The app supports pagination and a dedicated “Following” feed.
 
 ## Features
-- Register/Login/Logout (Django auth)
-- Create & edit posts (inline edit with AJAX)
-- Pagination on the main feed
-- Profile pages with user’s posts
-- Follow/Unfollow users
-- “Following” feed shows only authors you follow
-- Like/Unlike with real-time count updates
-- Clean, responsive layout
+- **Auth**: Register / Login / Logout (Django auth)
+- **Create Posts**: Text posts with validation
+- **Inline Edit**: Authors can edit their own posts via AJAX
+- **Likes**: Like/Unlike with live count updates
+- **Profiles**: User pages with their posts + follow/unfollow
+- **Following Feed**: Shows posts only from people you follow
+- **Pagination**: Efficient scrolling through large feeds
+- **Responsive UI**: Clean layout on mobile and desktop
 
 ## Tech Stack
-- Django (views, models, auth)
-- Vanilla JavaScript (Fetch API for async actions)
-- HTML/CSS
+- **Backend**: Django (views, models, auth)
+- **Frontend**: Vanilla JS (Fetch), HTML/CSS
+- **Data**: Relational models for Post, Follow, Like
 
-## Quickstart
+## Run Locally
 ```bash
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt || pip install "Django>=4,<6"
 python manage.py migrate
-python manage.py createsuperuser  # create an admin for testing
+python manage.py createsuperuser
 python manage.py runserver
