@@ -3,7 +3,6 @@
 
 # 🌐 Network (Project 4)
 
-### Option A — paste this Markdown into `README.md`
 ```markdown
 # CS50W Project 4 — Network
 
